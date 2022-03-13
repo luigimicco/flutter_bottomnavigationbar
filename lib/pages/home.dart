@@ -7,17 +7,36 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
+
+  static List<Widget> pages = <Widget>[
+    const Center(
+      child: Text('Home page'),
+    ),
+    const Center(
+      child: Text('Pagina 1'),
+    ),
+    const Center(
+      child: Text('Pagina 2'),
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter demo'),
       ),
-      body: const Center(
-        // in the middle of the parent.
-        child: Text('Home page'),
-      ),
+      body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: _onItemTapped,
         selectedItemColor: Colors.amber,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
