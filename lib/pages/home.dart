@@ -17,6 +17,23 @@ class _HomeState extends State<Home> {
         // in the middle of the parent.
         child: Text('Home page'),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.amber,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: 'Pagina 1',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Pagina 2',
+          ),
+        ],
+      ),
     );
   }
 }
