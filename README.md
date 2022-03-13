@@ -1,4 +1,5 @@
 # flutter_bottomnavigationbar
 
-A new Flutter project to test  bottom navigation bar 
+Un esempio di implementazione di bottomNavigationBar 
 
+![](/screenshots/final.gif) 
